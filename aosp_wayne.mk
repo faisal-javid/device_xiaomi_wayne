@@ -20,7 +20,7 @@
 $(call inherit-product, device/xiaomi/wayne/device.mk)
 
 # Inherit ShapeShiftOS product configuration
-$(call inherit-product, vendor/ssos/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Gapps
 USE_GAPPS := true
@@ -49,12 +49,12 @@ BUILD_FINGERPRINT := "xiaomi/wayne/wayne:8.1.0/OPM1.171019.011/V9.5.11.0.ODCCNFA
 # Device identifier
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := ssos_wayne
+PRODUCT_NAME := aosp_wayne
 PRODUCT_DEVICE := wayne
 PRODUCT_MODEL := MI 6X
 
-# Inherit ShapeShiftOS Official build stuff.
-SSOS_BUILD_TYPE := OFFICIAL
+# Inherit Pixel Experience build stuff.
+TARGET_USES_AOSP_RECOVERY := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_BOOT_ANIMATION_RES := 1080
 
