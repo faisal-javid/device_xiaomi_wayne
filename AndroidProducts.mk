@@ -16,9 +16,9 @@
 
 # inherit device config for Pixel Experience
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_wayne.mk
+    $(LOCAL_DIR)/xdroid_wayne.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_wayne-eng \
-    aosp_wayne-userdebug \
-    aosp_wayne-user
+    xdroid_wayne-eng \
+    xdroid_wayne-userdebug \
+    xdroid_wayne-user
