@@ -9,7 +9,7 @@
 $(call inherit-product, device/xiaomi/wayne/device.mk)
 
 # Inherit Xdroid product configuration
-$(call inherit-product, vendor/xdroid/config/common_full_phone.mk)
+$(call inherit-product, vendor/xdroid/config/common.mk)
 
 # Define first api level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
