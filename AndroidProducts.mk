@@ -6,9 +6,9 @@
 
 # inherit device config for ShapeShiftOS
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_wayne.mk
+    $(LOCAL_DIR)/cipher_wayne.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_wayne-eng \
-    aosp_wayne-userdebug \
-    aosp_wayne-user
+    cipher_wayne-eng \
+    cipher_wayne-userdebug \
+    cipher_wayne-user
