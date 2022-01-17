@@ -19,18 +19,16 @@
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/wayne/device.mk)
 
-# Inherit some common stuff from Project-Awaken
-AWAKEN_BUILD_TYPE := OFFICIAL
-$(call inherit-product, vendor/awaken/config/common.mk)
-$(call inherit-product, vendor/awaken/config/gsm.mk)
+# Inherit some common stuff 
+$(call inherit-product, vendor/xdroid/config/common.mk)
 
-# Gapps
-USE_GAPPS := true
-IS_PHONE := true
-TARGET_GAPPS_ARCH := arm64
+# Inherit XDROID build stuff
+XDROID_UI_BLUR := true
+XDROID_BUILD_TYPE := STBL
+XDROID_BOOT_DARK := false
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_STOCK_ARCORE := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
 
 # Define first api level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -41,9 +39,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="wayne-user 9 PKQ1.180904.001 V10.3.4.0.PDCCNXM release-keys"
 
+# Build Fingerprint
+BUILD_FINGERPRINT := "xiaomi/wayne/wayne:8.1.0/OPM1.171019.011/V9.5.11.0.ODCCNFA:user/release-keys"
+
 # Device identifier
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := awaken_wayne
+PRODUCT_NAME := xdroid_wayne
 PRODUCT_DEVICE := wayne
 PRODUCT_MODEL := MI 6X
